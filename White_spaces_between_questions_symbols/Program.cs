@@ -23,24 +23,13 @@ namespace White_spaces_between_questions_symbols
             }
             if (count >= 2)
             {
-                count = 0;
-                for (int i = 0; i < text.Length; i++)
-                {
-                    if (text[i] == '?')
+                for (int i = index; i < text.IndexOf('?', index + 1); i++)
+			    {
+                    if (text[i] == ' ')
                     {
-                        count++;
+                       text = text.Remove(text.IndexOf(text[i]), 1);
                     }
-                    while (count == 1)
-                    {
-                        for (int j = index; j < text.Length; j++)
-                        {
-                            if (text[j] == ' ')
-                            {
-                                text = text.Remove(text.IndexOf(text[j]), 1);
-                            }
-                        }
-                    }
-                }
+			    }
                 Console.WriteLine(text);
             }
             else Console.WriteLine("Your text does not have enough '?' symbols, try another time");
