@@ -10,18 +10,26 @@ namespace Example_to_symbol
     {
         static void Main(string[] args)
         {
+            int count;
             Console.WriteLine("Enter text:");
             string text = Console.ReadLine();
-            StringBuilder temp = new StringBuilder(text);
-            char[] arr = text.ToCharArray();
-            for (int i = 0; i < text.Length; i++)
+            string result = "";
+            foreach (char c in text) 
             {
-                for (int j = 0; j < arr.Length; j++)
+                count = 0;
+                foreach (char c2 in result) //проверка, что символ не является дубликатом
                 {
-
+                    if (c2 == c)
+                    {
+                        count++;
+                    }
                 }
+                if (count < 1) //проверка, что символ не повторялся еще в строке, вместо 1 может быть другое допустимое число дубликатов символа в строке
+                 {
+                    result = result + c;
+                 }       
             }
-            Console.WriteLine(text);
+            Console.WriteLine(z);
             Console.ReadKey();
         }
     }
