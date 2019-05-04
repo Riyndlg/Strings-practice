@@ -14,14 +14,18 @@ namespace Number_for_word
             string text = Console.ReadLine();
             Console.WriteLine("Enter number of word (start from 0): ");
             int number = int.Parse(Console.ReadLine());
-            string [] words = text.Split(' ');
-            for (int i = 0; i < words.Length; i++)
+            for (int i = 0; i < text.Length; i++)
             {
-                if (words[i].Contains(' '))
+                if (text[i] == ' ')
                 {
-
+                    while (text[i + 1] == ' ')
+                    {
+                        text = text.Remove(i + 1, 1);
+                    }
                 }
+
             }
+            string[] words = text.Split(' ');
             if (number <= words.Length)
             {
                 for (int i = 0; i < words.Length; i++)
