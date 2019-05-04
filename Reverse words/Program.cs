@@ -12,7 +12,22 @@ namespace Reverse_words
         {
             Console.WriteLine("Enter text:");
             string text = Console.ReadLine();
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (text[i] == ' ')
+                {
+                    while (text[i + 1] == ' ')
+                    {
+                        text = text.Remove(i + 1, 1);
+                    }
+                }
 
+            }
+            string[] words = text.Split(' ');
+            for (int i = words.Length - 1; i >= 0; i--)
+            {
+                Console.WriteLine(words[i]);
+            }
             Console.ReadKey();
         }
     }
