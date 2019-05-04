@@ -16,9 +16,12 @@ namespace Capitalize_words
             {
                 if (text[i] == ' ')
                 {
-                   
+                    letter = text[i + 1];
+                    letter = Char.ToUpper(letter);
+                    text = text.Replace(text[i + 1], letter);
                 }
             }
+            Console.WriteLine(text);
             Console.ReadKey();
         }
     }
