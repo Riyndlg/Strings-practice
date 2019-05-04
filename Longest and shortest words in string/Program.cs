@@ -23,7 +23,6 @@ namespace Longest_and_shortest_words_in_string
                         text = text.Remove(i + 1, 1);
                     }
                 }
-
             }
             string[] words = text.Split(' ');
             for (int i = 0; i < words.Length; i++)
