@@ -12,9 +12,14 @@ namespace Excessive_white_spaces
         {
             Console.WriteLine("Enter text:");
             string text = Console.ReadLine();
+            int count = 0;
             text = text.Trim();
             for (int i = 0; i < text.Length; i++)
             {
+                if (text[i] == ' ')
+                {
+                    count++;
+                }
 
             }
             Console.WriteLine(text);
