@@ -24,7 +24,7 @@ namespace Function_printer_error
                     }
                 }
             }
-            Console.WriteLine(illegal / text.Length);
+            Console.WriteLine($"{illegal}/{text.Length}");
             Console.ReadKey();
         }
     }
