@@ -29,7 +29,7 @@ namespace Example_to_symbol
                     result = result + c;
                  }       
             }
-            Console.WriteLine(z);
+            Console.WriteLine(result);
             Console.ReadKey();
         }
     }
